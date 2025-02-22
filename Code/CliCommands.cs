@@ -35,4 +35,29 @@ partial class CliHandler
         OpenBrowser("https://gbdev.io");
         OpenBrowser("https://gbdev.io/rgbds-live/");
     }
+
+    private void PROJECTS()
+    {
+        Console.WriteLine(@"Select which project you would like to View:
+        1
+        2
+        3
+        4
+        ");
+
+        bool validatedInput = false;
+
+        while (!validatedInput)
+        {
+            
+            try 
+            {
+                String? inputString = Console.ReadLine();
+                if(inputString is null){continue;}
+                int projectChosen = int.Parse(inputString);
+                validatedInput = true;
+            }
+            catch (Exception){Console.WriteLine("Your input was not valid, please try again");}
+        }
+    }
 }

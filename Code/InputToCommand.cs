@@ -23,6 +23,10 @@ partial class CliHandler
             case "project4":
                 PROJECT4();
                 break;
+            
+            case "projects":
+                PROJECTS();
+                break;
 
         }
 
