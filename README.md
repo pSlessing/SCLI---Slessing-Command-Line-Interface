@@ -12,7 +12,7 @@ Commands:
     - JAZZ // Opens TIDAL, sets the Jazz Rap 101 playlist as the one to play, and starts the music via media keys
 
     - Projects // Prompts for which project to display a small paragraph about it, and then opens the Github repository for said project
-        - 1
-        - 2
-        - 3
-        - 4
+        - 1 Chargepoint Placement Finder
+        - 2 Group Activity Recommendation System
+        - 3 Time Registration System
+        - 4 PENGUIN: a Programming Environment for the Nintendo Gameboyd with User-friendly Instruction Notation
