@@ -28,6 +28,10 @@ partial class CliHandler
                 PROJECTS();
                 break;
 
+            case "launch":
+                LAUNCH();
+                break;
+
         }
 
     }

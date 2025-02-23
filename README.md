@@ -11,6 +11,9 @@ Commands:
     - CAOS // Opens relevant Moodle pages and books for the course
     - JAZZ // Opens TIDAL, sets the Jazz Rap 101 playlist as the one to play, and starts the music via media keys
 
+    - Pomodoro // Yet to be implemented, a pomodoro timer for 
+    - Launch // Opens a suite of browser windows i always use
+
     - Projects // Prompts for which project to display a small paragraph about it, and then opens the Github repository for said project
         - 1 Chargepoint Placement Finder
         - 2 Group Activity Recommendation System

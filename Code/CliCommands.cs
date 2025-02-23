@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 partial class CliHandler
 {
         private void SS()
@@ -22,12 +24,24 @@ partial class CliHandler
         Console.WriteLine("Have fun with Brian");
     }
 
+
+
+
+
+
     private void JAZZ()
     {
         OpenBrowser("tidal://playlist/a0e649f8-c7a5-4879-bbf2-d98110b42d2b");
         SendPlayPauseKey();
         Console.WriteLine("Playing the BEST version of jazz...");
     }
+
+
+
+
+
+
+
 
     private void PROJECT4()
     {
@@ -60,4 +74,34 @@ partial class CliHandler
             catch (Exception){Console.WriteLine("Your input was not valid, please try again");}
         }
     }
+
+    private void POMODORO()
+    {
+        //Get current time
+
+        //Find the time 25 minutes ahead
+
+        //While loop that waits and either gives a notification, or plays a sound when the timer is done
+
+        //Repeat loop for break
+
+
+        //Should potentially display a small funny thing 
+    }
+
+    private void LAUNCH()
+    {
+        OpenBrowser("https://mail.one.com/mail/INBOX/1");
+        OpenBrowser("https://www.dr.dk/");
+        OpenBrowser("https://www.zetland.dk/");
+        
+    }
+
+
+
+
+
+
+
+
 }
