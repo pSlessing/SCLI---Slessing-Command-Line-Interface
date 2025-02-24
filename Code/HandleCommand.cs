@@ -1,6 +1,6 @@
 partial class CliHandler
 {
-        private void HandleCommand(string input)
+    private void HandleCommand(string input)
     {
         RunPreCommands();
         ProcessCommand(input);
@@ -11,19 +11,6 @@ partial class CliHandler
     private void RunPreCommands()
     {
 
-        var currentDate = DateTime.Now;
-        if (currentDate.DayOfWeek == DayOfWeek.Monday)
-        {
-            Console.WriteLine("Eow, husk at du har fodbold i aften!");
-        }
-
-        //Evt. tilføj andre checks n balances
-
-    }
-
-
-    private void RunPostCommands()
-    {
         Console.WriteLine(@"  _________.__                       .__                 
  /   _____/|  |   ____   ______ _____|__| ____    ____   
  \_____  \ |  | _/ __ \ /  ___//  ___/  |/    \  / ___\  
@@ -48,5 +35,18 @@ _________                                           .___
 |   |   |  \  | \  ___/|  | \/|  |   / __ \\  \__\  ___/ 
 |___|___|  /__|  \___  >__|   |__|  (____  /\___  >___  >
          \/          \/                  \/     \/    \/ ");
+
+        //Evt. tilføj andre checks n balances
+
+    }
+
+
+    private void RunPostCommands()
+    {
+        var currentDate = DateTime.Now;
+        if (currentDate.DayOfWeek == DayOfWeek.Monday)
+        {
+            Console.WriteLine("Eow, husk at du har fodbold i aften!");
+        }
     }
 }
