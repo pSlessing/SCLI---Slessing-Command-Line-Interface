@@ -3,6 +3,24 @@ partial class CliHandler
     private void HandleCommand(string input)
     {
         RunPreCommands();
+
+        if (input.Length == 0)
+        {
+            bool validatedInput = false;
+
+            while (!validatedInput)
+            {
+
+                try
+                {
+                    input = Console.ReadLine();
+                    if (input is null) { continue;}
+                    validatedInput = true;
+                }
+                catch (Exception) { Console.WriteLine("Your input was not valid, please try again"); }
+            }
+        }
+
         ProcessCommand(input);
         RunPostCommands();
 
@@ -11,6 +29,19 @@ partial class CliHandler
     private void RunPreCommands()
     {
 
+        var currentDate = DateTime.Now;
+        if (currentDate.DayOfWeek == DayOfWeek.Monday)
+        {
+            Console.WriteLine("Eow, husk at du har fodbold i aften!");
+        }
+
+        TODAY();
+
+    }
+
+
+    private void RunPostCommands()
+    {
         Console.WriteLine(@"  _________.__                       .__                 
  /   _____/|  |   ____   ______ _____|__| ____    ____   
  \_____  \ |  | _/ __ \ /  ___//  ___/  |/    \  / ___\  
@@ -35,18 +66,5 @@ _________                                           .___
 |   |   |  \  | \  ___/|  | \/|  |   / __ \\  \__\  ___/ 
 |___|___|  /__|  \___  >__|   |__|  (____  /\___  >___  >
          \/          \/                  \/     \/    \/ ");
-
-        //Evt. tilføj andre checks n balances
-
-    }
-
-
-    private void RunPostCommands()
-    {
-        var currentDate = DateTime.Now;
-        if (currentDate.DayOfWeek == DayOfWeek.Monday)
-        {
-            Console.WriteLine("Eow, husk at du har fodbold i aften!");
-        }
     }
 }

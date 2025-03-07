@@ -97,6 +97,11 @@ partial class CliHandler
         
     }
 
+    private void TODAY()
+    {
+        //Insert connecting to Outlook and getting events for today
+    }
+
 
 
 
