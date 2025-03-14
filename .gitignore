@@ -133,4 +133,7 @@ $RECYCLE.BIN/
 #All books ignored
 *.pdf
 
+#Visual Studio
+.vs/
+
 _NCrunch*

@@ -29,7 +29,7 @@ partial class CliHandler
 
         PrintLogo();
         var currentDate = DateTime.Now;
-        Console.WriteLine($"The day is {currentDate.DayOfWeek} the {currentDate.Day}. of {currentDate.Month}");
+        Console.WriteLine($"The day is {currentDate.DayOfWeek} the {currentDate.Day}. of {getFullMonthName(currentDate.Month)}");
 
         if (currentDate.DayOfWeek == DayOfWeek.Monday)
         {   

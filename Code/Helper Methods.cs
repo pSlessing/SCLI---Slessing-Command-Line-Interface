@@ -71,4 +71,11 @@ _________                                           .___
 |___|___|  /__|  \___  >__|   |__|  (____  /\___  >___  >
          \/          \/                  \/     \/    \/ ");
     }
+
+    static string getFullMonthName(int month)
+    {
+        DateTime date = new(2020, month, 1);
+
+        return date.ToString("MMMM");
+    }
 }

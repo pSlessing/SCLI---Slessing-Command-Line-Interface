@@ -3,7 +3,7 @@ using System.CommandLine.Invocation;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
-class Program
+class Root
 {
     static int Main(string[] args)
     {

@@ -32,6 +32,10 @@ partial class CliHandler
                 LAUNCH();
                 break;
 
+            case "pomodoro":
+                POMODORO();
+                break;
+
         }
 
     }

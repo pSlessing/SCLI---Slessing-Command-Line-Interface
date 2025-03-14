@@ -1,8 +1,9 @@
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
+using System.Text;
 
 partial class CliHandler
 {
-        private void SS()
+    private void SS()
     {
         OpenBrowser("https://www.moodle.aau.dk/course/view.php?id=55099");
         OpenBrowser("C:\\Users\\peter\\Desktop\\SlessingCLI\\ITTTC.pdf");
@@ -24,24 +25,12 @@ partial class CliHandler
         Console.WriteLine("Have fun with Brian");
     }
 
-
-
-
-
-
     private void JAZZ()
     {
         OpenBrowser("tidal://playlist/a0e649f8-c7a5-4879-bbf2-d98110b42d2b");
         SendPlayPauseKey();
         Console.WriteLine("Playing the BEST version of jazz...");
     }
-
-
-
-
-
-
-
 
     private void PROJECT4()
     {
@@ -63,28 +52,82 @@ partial class CliHandler
 
         while (!validatedInput)
         {
-            
-            try 
+
+            try
             {
                 String? inputString = Console.ReadLine();
-                if(inputString is null){continue;}
+                if (inputString is null) { continue; }
                 int projectChosen = int.Parse(inputString);
                 validatedInput = true;
             }
-            catch (Exception){Console.WriteLine("Your input was not valid, please try again");}
+            catch (Exception)
+            {
+                Console.WriteLine("Your input was not valid, please try again");
+            }
         }
     }
 
     private void POMODORO()
     {
-        //Get current time
+        Console.WriteLine();
+        Console.WriteLine();
 
-        //Find the time 25 minutes ahead
+        var nextTimeFlag = (DateTime.Now).AddMinutes(25);
+        var bottomConsoleRow = Console.GetCursorPosition().Top;
+        var currentTimeLeft = nextTimeFlag - DateTime.Now;
+        char[] animationString = ("Aaaaaaaa").ToArray();
+        int currentAnimationIndex = 0;
+
+
+        while (DateTime.Compare(nextTimeFlag, DateTime.Now) > 0)
+        {
+            currentTimeLeft = nextTimeFlag - DateTime.Now;
+
+            //Fun animation
+            Console.SetCursorPosition(0, bottomConsoleRow - 2);
+            Console.Write(animationString);
+            //Dislay time
+            Console.SetCursorPosition(0, bottomConsoleRow - 1);
+            Console.Write($"{currentTimeLeft.Minutes}:{currentTimeLeft.Seconds}");
+            //Fun animation
+            Console.SetCursorPosition(0, bottomConsoleRow);
+            Console.Write(animationString);
+
+
+            animationString[currentAnimationIndex] = 'a';
+            if (currentAnimationIndex == 7) { currentAnimationIndex = 0; }
+            else { currentAnimationIndex++; }
+            animationString[currentAnimationIndex] = 'A';
+            Thread.Sleep(1000);
+        }
 
         //While loop that waits and either gives a notification, or plays a sound when the timer is done
 
         //Repeat loop for break
+        nextTimeFlag = (DateTime.Now).AddMinutes(5);
+        bottomConsoleRow = Console.GetCursorPosition().Top;
+        while (DateTime.Compare(nextTimeFlag, DateTime.Now) < 1)
+        {
+            currentTimeLeft = nextTimeFlag - DateTime.Now;
 
+            //Fun animation
+            Console.SetCursorPosition(0, bottomConsoleRow - 2);
+            Console.Write(animationString);
+            //Dislay time
+            Console.SetCursorPosition(0, bottomConsoleRow - 1);
+            Console.Write($"{currentTimeLeft.Minutes}:{currentTimeLeft.Seconds}");
+            //Fun animation
+            Console.SetCursorPosition(0, bottomConsoleRow);
+            Console.Write(animationString);
+
+
+            animationString[currentAnimationIndex] = 'a';
+            if (currentAnimationIndex == 7) { currentAnimationIndex = 0; }
+            else { currentAnimationIndex++; }
+            animationString[currentAnimationIndex] = 'A';
+
+            Thread.Sleep(1000);
+        }
 
         //Should potentially display a small funny thing 
     }
@@ -94,7 +137,7 @@ partial class CliHandler
         OpenBrowser("https://mail.one.com/mail/INBOX/1");
         OpenBrowser("https://www.dr.dk/");
         OpenBrowser("https://www.zetland.dk/");
-        
+
     }
 
     private void TODAY()
