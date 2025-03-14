@@ -4,22 +4,19 @@ partial class CliHandler
     {
         RunPreCommands();
 
-        if (input.Length == 0)
+        bool validatedInput = false;
+
+        while (!validatedInput)
         {
-            bool validatedInput = false;
-
-            while (!validatedInput)
+            try
             {
-
-                try
-                {
-                    var inputString = Console.ReadLine();
-                    if (inputString is null) { continue;}
-                    validatedInput = true;
-                    input = inputString;
-                }
-                catch (Exception) { Console.WriteLine("Your input was not valid, please try again"); }
+                Console.Write("Input your desired command:");
+                var inputString = Console.ReadLine();
+                if (inputString is null) { continue; }
+                validatedInput = true;
+                input = inputString;
             }
+            catch (Exception) { Console.WriteLine("Your input was not valid, please try again"); }
         }
 
         ProcessCommand(input);
@@ -32,8 +29,11 @@ partial class CliHandler
 
         PrintLogo();
         var currentDate = DateTime.Now;
+        Console.WriteLine($"The day is {currentDate.DayOfWeek} the {currentDate.Day}. of {currentDate.Month}");
+
         if (currentDate.DayOfWeek == DayOfWeek.Monday)
-        {
+        {   
+            Console.WriteLine();
             Console.WriteLine("Eow, husk at du har fodbold i aften!");
         }
 

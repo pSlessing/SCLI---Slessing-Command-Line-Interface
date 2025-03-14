@@ -31,7 +31,6 @@ partial class CliHandler
     {
         var rootCommand = new RootCommand
         {
-            new Argument<string>("input", "A required input argument")
         };
 
         rootCommand.Handler = CommandHandler.Create<string>(HandleCommand);
