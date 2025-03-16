@@ -77,6 +77,7 @@ partial class CliHandler
         var currentTimeLeft = nextTimeFlag - DateTime.Now;
         char[] animationString = ("Aaaaaaaa").ToArray();
         int currentAnimationIndex = 0;
+        Console.CursorVisible = false;
 
 
         while (DateTime.Compare(nextTimeFlag, DateTime.Now) > 0)
@@ -130,6 +131,8 @@ partial class CliHandler
         }
 
         //Should potentially display a small funny thing 
+
+        Console.CursorVisible = true;
     }
 
     private void LAUNCH()
