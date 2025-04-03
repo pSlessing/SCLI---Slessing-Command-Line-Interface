@@ -11,6 +11,7 @@ Commands:
     - JAZZ // Opens TIDAL, sets the Jazz Rap 101 playlist as the one to play, and starts the music via media keys
     - Pomodoro // A Pomodore timer with 25 minute work segments, and a 5 break section
     - Launch // Opens a suite of browser windows i always use
+    - Conway // Conways game of life. Use the arrow keys and the M key to mark tiles, then enter to exit marking phase, and enter again to step a single time. Press escape to exit
     - Projects // Prompts for which project to display a small paragraph about it, and then opens the Github repository for said project
         - 1 Chargepoint Placement Finder
         - 2 Group Activity Recommendation System
