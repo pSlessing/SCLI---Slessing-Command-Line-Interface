@@ -36,6 +36,9 @@ partial class CliHandler
                 POMODORO();
                 break;
 
+            case "conway":
+                ConwayGame();
+                break;
         }
 
     }
