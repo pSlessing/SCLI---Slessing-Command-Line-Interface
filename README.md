@@ -1,19 +1,34 @@
-# Slessing Command Line Interface - SCLI
+# Slessing Command Line Interface (SCLI)
 
-This is a small project to make my life easier and less annoying during University!
+A small project to make university life easier and less annoying! This CLI tool is continuously being expanded with new features to streamline daily workflows.
 
-It currently features the commands below, but I'm continously adding more features!
+## Available Commands
 
-Commands:
-    - SS // Opens relevant Moodle pages and books for the course
-    - SPO // Opens relevant Moodle pages and books for the course
-    - CAOS // Opens relevant Moodle pages and books for the course
-    - JAZZ // Opens TIDAL, sets the Jazz Rap 101 playlist as the one to play, and starts the music via media keys
-    - Pomodoro // A Pomodore timer with 25 minute work segments, and a 5 break section
-    - Launch // Opens a suite of browser windows i always use
-    - Conway // Conways game of life. Use the arrow keys and the M key to mark tiles, then enter to exit marking phase, and enter again to step a single time. Press escape to exit
-    - Projects // Prompts for which project to display a small paragraph about it, and then opens the Github repository for said project
-        - 1 Chargepoint Placement Finder
-        - 2 Group Activity Recommendation System
-        - 3 Time Registration System
-        - 4 PENGUIN: a Programming Environment for the Nintendo Gameboy with User-friendly Instruction Notation
+### Academic Tools
+- **`SS`** - Opens relevant Moodle pages and books for the course
+- **`SPO`** - Opens relevant Moodle pages and books for the course  
+- **`CAOS`** - Opens relevant Moodle pages and books for the course
+
+### Productivity & Utilities
+- **`JAZZ`** - Opens TIDAL, sets the Jazz Rap 101 playlist, and starts music via media keys
+- **`Pomodoro`** - A Pomodoro timer with 25-minute work segments and 5-minute break sections
+- **`Launch`** - Opens a suite of browser windows that i always use
+
+### Interactive Features
+- **`Conway`** - Conway's Game of Life implementation
+  - Use arrow keys and `M` key to mark tiles
+  - Press `Enter` to exit marking phase
+  - Press `Enter` again to step through simulation
+  - Press `Escape` to exit
+
+- **`Projects`** - Interactive project showcase
+  - Displays project descriptions and opens corresponding GitHub repositories
+  - Available projects:
+    1. **Chargepoint Placement Finder**
+    2. **Group Activity Recommendation System** 
+    3. **Time Registration System**
+    4. **PENGUIN** - A Programming Environment for the Nintendo Gameboy with User-friendly Instruction Notation
+
+---
+
+*This project is actively maintained and new features are being added regularly to enhance the university experience!*
